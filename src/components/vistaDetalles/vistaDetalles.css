@@ -1,0 +1,36 @@
+.vista-detalle{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    background-color: #df095e;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sprite{
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    background-color: #585858;
+    border: 15px solid #dedede;
+    border-radius: 5px;
+    color: #585858;
+}
+
+.poke-info{
+    width: 100%;
+    height: 110px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #585858;
+    border-radius: 5px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.22);
+    color: #fff;
+}
+
+.poke-info__char{
+    font-size: 10px;
+}

@@ -1,0 +1,157 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.pokemon-img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  margin-right: 300px;
+}
+
+#respuesta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 250px;
+  gap: 20px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+button[type="submit"] {
+  width: 80px;
+  height: 40px;
+  background-color: #00ff00;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#juego h1, #juego p{
+  margin-right: 300px;
+}
+
+p {
+  font-size: 24px;
+}
+
+.correcto {
+  color: green;
+}
+
+.incorrecto {
+  color: red;
+}
+
+#ganadoresBtn{
+  width: 200px;
+  height: 40px;
+  background-color: lightblue;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 60px;
+}
+
+#adivina{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "juego ganadores"
+    "resultado ganadores";
+  
+}
+
+#juego{
+  background-image: url('https://external-preview.redd.it/e5zoQw-hgw-LCjdhC_4G8IAcHxex5pzda_BD_FPTcBY.png?width=640&crop=smart&auto=webp&s=c49f7f29d2bb61f41f209ff2191cb7f69f3fa6e9');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#resultado{
+  grid-area: resultado;
+  padding-top: 20px;
+}
+
+@media(max-width: 575.98px){
+  #adivina{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #juego{
+    grid-area: juego;
+    background-image: url('https://external-preview.redd.it/e5zoQw-hgw-LCjdhC_4G8IAcHxex5pzda_BD_FPTcBY.png?width=640&crop=smart&auto=webp&s=c49f7f29d2bb61f41f209ff2191cb7f69f3fa6e9');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #respuesta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 250px;
+    gap: 20px;
+  }
+
+  #resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 250px;
+    gap: 20px;
+  }
+
+  .pokemon-img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    margin-right: 330px;
+  }
+
+  #ganadoresBtn{
+    width: 200px;
+    height: 40px;
+    background-color: lightblue;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 60px;
+  }
+
+  #juego{
+    background-image: url('https://external-preview.redd.it/e5zoQw-hgw-LCjdhC_4G8IAcHxex5pzda_BD_FPTcBY.png?width=640&crop=smart&auto=webp&s=c49f7f29d2bb61f41f209ff2191cb7f69f3fa6e9');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+
+
+}
