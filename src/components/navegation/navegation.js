@@ -41,7 +41,6 @@ function Navigation() {
       <Link to="/" className="link">Inicio</Link>
       <Link to="/listaPokemon" className="link">Lista de Pokemon</Link>
       <Link to="/juego" className="link">Juego</Link>
-      <Link to="/listaDatos" className="link">listaDatos</Link>
       <Link id="loginNav" to="/login" className="link">Login</Link>
     </div>
     </>

@@ -9,8 +9,8 @@ const VistaDetalles = ({pokemon}) => {
             <div className='poke-info'>
                 <h4 className='poke-info__nombre'>Nombre: {nombre}</h4>
                 <p className='poke-info__char'>Tipo: {tipo}</p>
-                <p className='poke-info__char'>Altura: {altura}</p>
-                <p className='poke-info__char'>Peso: {peso}</p>
+                <p className='poke-info__char'>Altura: {altura} dm</p>
+                <p className='poke-info__char'>Peso: {peso} dag</p>
             </div>
         </section>
     )

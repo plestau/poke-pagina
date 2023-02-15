@@ -37,3 +37,29 @@
     margin-top: 30px;
     font-weight: 1000;
 }
+
+#explicacion{
+    grid-area: explicacion;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 1000;
+    color: black;
+}
+
+#imagen{
+    grid-area: imagen;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 1000;
+    color: black;
+}

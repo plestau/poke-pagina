@@ -74,12 +74,13 @@ p {
 
 #adivina{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 50vw 50vw;
   grid-template-areas: 
     "juego ganadores"
-    "resultado ganadores";
-  
+    "resultado ganadores"
+    "error error";
+  background-color: lightgoldenrodyellow;
+  height: 76.4vh;
 }
 
 #juego{
@@ -89,10 +90,35 @@ p {
   background-position: center;
 }
 
+#puntuaciones{
+  grid-area: ganadores;
+  background-color: aliceblue;
+  height: 61vh;
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#puntuaciones li{
+  list-style: none;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#puntuaciones li p{
+  font-size: 18px;
+}
+
 #resultado{
   grid-area: resultado;
-  padding-top: 20px;
+  width: 40%;
+  margin-left: 100px;
 }
+
+#errorSesion{
+  grid-area: error;
+}
+
 
 @media(max-width: 575.98px){
   #adivina{

@@ -4,9 +4,17 @@
     display: grid;
     place-items: center;
     grid-template-columns: 1fr 1fr 1fr; 
+    margin-bottom: 200px;
 }
 
-#registro, #login, #loginFacebook{
+#loginDiv h2{
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#registro, #login, #loginGoogle{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +27,7 @@
 
 #registroBtn, #loginBtn, #loginFacebookBtn{
     width: 200px;
-    height: 50px;
+    height: 35px;
     border-radius: 5px;
     background-color: lightgreen;
     box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);

@@ -31,6 +31,7 @@
     border-radius: 5px;
     background-color: #f5f5f5;
     box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
+    border: 3px solid gray;
 }
 
 .pokemon:hover{
@@ -40,6 +41,11 @@
 
 .pokemon .tipo, .pokemon .nombre{
     color: black;
+}
+
+.pokemon .tipo{
+    font-size: 12px;
+    font-weight: bold;
 }
 
 *:link{

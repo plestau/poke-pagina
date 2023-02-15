@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, FacebookAuthProvider, signInWithPopup } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, FacebookAuthProvider, signInWithPopup, getAuth } from 'firebase/auth';
 import { auth } from '../../firebaseConfig';
 import './login.css';
 
@@ -8,8 +8,6 @@ function Login() {
   const [passwordRegistro, setPasswordRegistro] = useState('');
   const [emailLogin, setEmailLogin] = useState('');
   const [passwordLogin, setPasswordLogin] = useState('');
-
-  const provider = new GoogleAuthProvider();
 
   const registrarse = () => {
     createUserWithEmailAndPassword(auth, emailRegistro, passwordRegistro)
@@ -30,8 +28,6 @@ function Login() {
         // Signed in
         const user = userCredential.user;
         alert("Sesión iniciada")
-
-        
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -43,34 +39,39 @@ function Login() {
     const provider = new FacebookAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
+        // The signed-in user info.
+        const user = result.user;
+
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         const credential = FacebookAuthProvider.credentialFromResult(result);
         const accessToken = credential.accessToken;
-        // The signed-in user info.
-        const user = result.user;
+        console.log(accessToken)
+
+        // IdP data available using getAdditionalUserInfo(result)
         // ...
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
         // The email of the user's account used.
-        const email = error.email;
+        const email = error.customData.email;
         // The AuthCredential type that was used.
         const credential = FacebookAuthProvider.credentialFromError(error);
+
         // ...
       });
   };
 
   const iniciarSesionGoogle = () => {
+    const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
-        // The signed-in user info.
         const user = result.user;
         // IdP data available using getAdditionalUserInfo(result)
-        // ...
+        alert("Sesión iniciada con Google")
       })
       .catch((error) => {
         // Handle Errors here.
@@ -118,16 +119,13 @@ function Login() {
         />
         <button id="loginBtn" onClick={iniciarSesion}>Iniciar sesión</button>
       </div>
-      <div id="loginFacebook">
-        <h2>Login con Facebook</h2>
-        <button id="loginFacebookBtn" onClick={iniciarSesionFB}><i class="fa-brands fa-facebook"></i>Iniciar sesión con Facebook</button>
-        </div>
-        <div id="loginGoogle">
-        <h2>Login con Google</h2>
-        <button id="loginFacebookBtn" onClick={iniciarSesionGoogle}><i class="fa-brands fa-google"></i>Iniciar sesión con Google</button>
-        </div>
+      <div id="loginGoogle">
+      <h2>Login con Facebook/Google</h2>
+        <button id="loginFacebookBtn" onClick={iniciarSesionGoogle}><i className="fa-brands fa-google"></i>Iniciar sesión con Google</button>
+        <button id="loginFacebookBtn" onClick={iniciarSesionFB}><i className="fa-brands fa-facebook"></i>Iniciar sesión con Facebook</button>
+      </div>
     </div>
-    );
+  );
 }
 
 export default Login;

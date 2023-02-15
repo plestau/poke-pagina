@@ -3,7 +3,9 @@
 }
 
 body{
-  background-color: lightgoldenrodyellow;
+  background-image: url('https://p4.wallpaperbetter.com/wallpaper/335/66/329/pokemon-poke-ball-hd-wallpaper-preview.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
   font-family: 'Avenir Next', sans-serif;
