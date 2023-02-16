@@ -86,9 +86,7 @@ const Juego = () => {
         // oculta el div juego
         document.getElementById('juego').style.display = 'none';
         setResultado('Perdiste');
-        // guarda la puntación en la firestore
         escribePuntuacion();
-        // muestra la puntuación y oculta el juego
       }
       empiezaJuego();
       verGanadores();
@@ -96,30 +94,30 @@ const Juego = () => {
   };
 
   return (
-    <div id="adivina">
-      <p id="resultado">{resultado}</p>
-      <div id="juego">
-        <h1>Adivina el Pokémon</h1>
-        <p>Puntuación: {contador}</p>
-        <p>Vidas: {vidas}</p>
-        <img className='pokemon-img' src={pokemon.imagen} />
-        <form id="respuesta" onSubmit={handleSubmit}>
-          <input type="text" value={nombreIngresado} onChange={handleChange} />
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-      <div id="puntuaciones">
-        <ul id="ganadores">
-        <h1>Máximas puntuaciones</h1>
-          {puntuacion.map((punt) => (
-            <li key={punt.id}>
-              <p>{punt.cuenta}: {punt.puntuacion} pts</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div id="errorSesion"></div>
-    </div>
+<div id="adivina">
+  <div id="juego">
+    <h1>Adivina el Pokémon</h1>
+    <p>Puntuación: {contador}</p>
+    <p>Vidas: {vidas}</p>
+    <img className='pokemon-img' src={pokemon.imagen} />
+    <form id="respuesta" onSubmit={handleSubmit}>
+      <input type="text" value={nombreIngresado} onChange={handleChange} />
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="resultado">{resultado}</p>
+  </div>
+  <div id="puntuaciones">
+    <h1>Máximas puntuaciones</h1>
+    <ul id="ganadores">
+      {puntuacion.map((punt) => (
+        <li key={punt.id}>
+          <p>{punt.cuenta}: {punt.puntuacion} pts</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <div id="errorSesion"></div>
+</div>
 
   );
 };

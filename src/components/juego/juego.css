@@ -52,14 +52,6 @@ p {
   font-size: 24px;
 }
 
-.correcto {
-  color: green;
-}
-
-.incorrecto {
-  color: red;
-}
-
 #ganadoresBtn{
   width: 200px;
   height: 40px;
@@ -111,12 +103,17 @@ p {
 
 #resultado{
   grid-area: resultado;
-  width: 40%;
-  margin-left: 100px;
+  width: 30%;
+  margin-left: 130px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #errorSesion{
   grid-area: error;
+  color: red;
 }
 
 

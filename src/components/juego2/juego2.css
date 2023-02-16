@@ -1,0 +1,95 @@
+#juego2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    background-color: antiquewhite;
+    border-radius: 30px;
+}
+
+#juego2 img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#juego2 button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0077be;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#juego2 button:hover {
+    background-color: #005c8a;
+}
+
+#juego2 div {
+    margin: 10px;
+}
+
+#juego2 div:last-child {
+    font-size: 1.5rem;
+}
+
+#juego2 div:last-child div {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+#juego2 div:last-child div:last-child {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+#resultados2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+#puntuaciones2 {
+    margin-bottom: 20px;
+}
+
+#puntuaciones2 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#puntuaciones2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#puntuaciones2 li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#puntuaciones2 li p {
+    margin: 0;
+}
+
+#errorSesion2 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: red;
+    background-color: #e8e8e8;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+}

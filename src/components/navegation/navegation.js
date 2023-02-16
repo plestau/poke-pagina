@@ -3,6 +3,7 @@ import "./navegation.css";
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
 import { auth } from "../../firebaseConfig";
+import PokemonSearch from "./buscador";
 
 function Navigation() {
   useEffect(() => {
@@ -35,15 +36,23 @@ function Navigation() {
       }
     });
   }, []);
+  
+  function handlePokemonSelect(pokemonName) {
+    console.log(`Selected pokemon: ${pokemonName}`);
+    // Aquí podrías hacer algo con el nombre del Pokémon seleccionado, como buscarlo en la PokeAPI
+  }
+
   return (
-    <>
     <div className="navegation">
       <Link to="/" className="link">Inicio</Link>
       <Link to="/listaPokemon" className="link">Lista de Pokemon</Link>
-      <Link to="/juego" className="link">Juego</Link>
+      <Link to="/juego" className="link">Juego nombre</Link>
+      <Link to="/juego2" className="link">Juego tipos</Link>
       <Link id="loginNav" to="/login" className="link">Login</Link>
+      <div id="buscador">
+      <PokemonSearch onSelect={handlePokemonSelect} />
+      </div>
     </div>
-    </>
   );
 }
 

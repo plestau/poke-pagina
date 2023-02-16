@@ -6,7 +6,7 @@ const PokeList = ({ handleOnClick}) => {
     const [pokemon, setPokemon] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
-            const response = fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+            const response = fetch('https://pokeapi.co/api/v2/pokemon?limit=1008')
             const data = await (await response).json();
             const pokemonList = data.results.splice(0, data.results.length).map(items => items).flat();
             setPokemon(pokemonList);
