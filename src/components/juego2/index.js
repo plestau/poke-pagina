@@ -17,8 +17,9 @@ function Juego2() {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
+        const errorSesion = document.getElementById('errorSesion2');
+        errorSesion.style.display = 'none';
       } else {
-        // se muestra un div puntuaciones de que debe iniciar sesión para guardar la puntuación en el div puntuaciones
         const p = document.createElement('p');
         p.textContent = 'Debes iniciar sesión para guardar tu puntuación';
         const errorSesion = document.getElementById('errorSesion2');
@@ -107,6 +108,7 @@ function Juego2() {
     <div>
       <div id="juego2">
         <div id="juego_tipos">
+          <h1 id="titulo2">¿Qué tipo de Pokémon es?</h1>
         {pokemon ?
           <div>
             <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt="pokemon" style={{ filter: 'grayscale(100%)' }} />

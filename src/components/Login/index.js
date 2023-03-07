@@ -91,7 +91,7 @@ function Login() {
         <h2>Registro</h2>
         <input
           type="text"
-          placeholder="Nombre de usuario"
+          placeholder="Correo"
           value={emailRegistro}
           onChange={(event) => setEmailRegistro(event.target.value)}
         />
@@ -107,7 +107,7 @@ function Login() {
         <h2>Login</h2>
         <input
           type="text"
-          placeholder="Nombre de usuario"
+          placeholder="Correo"
           value={emailLogin}
           onChange={(event) => setEmailLogin(event.target.value)}
         />

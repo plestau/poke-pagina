@@ -6,10 +6,7 @@ import './listaPokemon.css';
 const TarjetaPokemon = (pokemon) => {
     const [listaPokemons, setListaPokemons] = useState([]);
     const [urlPokeAPI, setUrlPokeAPI] = useState('https://pokeapi.co/api/v2/pokemon/' + pokemon.id);
-    const [tipoActual, setTipoActual] = useState(null);
-
-    // cambia el color de fondo segun el tipo de pokemon
-    
+    const [tipoActual, setTipoActual] = useState(null);    
 
     useEffect(() => { cargaPokemon(); }, []);
 

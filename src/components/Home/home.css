@@ -95,3 +95,92 @@
     width: 300px;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 768px){
+    #home{
+        width: 100%;
+        border: none;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 0px;
+        display: grid;
+        grid-template-areas: 
+        "img"
+        "explicacion"
+        "imagen";
+    }
+    #home__img{
+        grid-area: img;
+        width: 100%;
+        height: 300px;
+        border-radius: 0px;
+        background-image: url('https://c4.wallpaperflare.com/wallpaper/336/735/824/ishmam-pokemon-salamence-bagon-hd-wallpaper-preview.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    
+    }
+    #home p{
+        text-align: center;
+        font-weight: 700;
+    }
+    #home a, #home a:visited{
+     color: green;
+    }
+    #home a:hover{
+        color: red;
+    }
+    #home h1{
+        background-color: rgba(1, 1, 0, 0.4);
+        width: 20%;
+        margin: auto;
+        border-radius: 30px;
+        color: greenyellow;
+        text-align: center;
+        margin-top: 30px;
+        font-weight: 1000;
+    }
+    #explicacion{
+        grid-area: explicacion;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 1000;
+        color: black;
+    }
+    #imagen{
+        grid-area: imagen;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 1000;
+        color: black;
+    }
+    #imagenes{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 1000;
+        color: black;
+    }
+    .explicacion_img{
+        width: 300px;
+        border-radius: 10px;
+    }
+}

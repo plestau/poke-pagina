@@ -93,3 +93,54 @@
     border-radius: 5px;
     border: 2px solid black;
 }
+
+@media screen and (max-width: 768px) {
+    #juego2 {
+        grid-template-columns: 1fr;
+    }
+
+    #juego2 div:last-child {
+        font-size: 1.2rem;
+    }
+
+    #juego2 div:last-child div {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    #juego2 div:last-child div:last-child {
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+
+    #juego2 img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    #juego2 button {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+    }
+
+    #resultados2 {
+        margin: 20px 0;
+    }
+
+    #puntuaciones2 h2 {
+        font-size: 1.2rem;
+    }
+
+    #puntuaciones2 li {
+        max-width: 300px;
+    }
+
+    #puntuaciones2 li p {
+        font-size: 1rem;
+    }
+
+    #errorSesion2 {
+        font-size: 1rem;
+    }
+}

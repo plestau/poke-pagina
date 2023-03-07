@@ -116,65 +116,88 @@ p {
   color: red;
 }
 
-
-@media(max-width: 575.98px){
-  #adivina{
-    display: flex;
-    flex-direction: column;
+@media screen and (max-width: 768px) {
+  #adivina {
+    grid-template-columns: 100vw;
+    grid-template-areas: 
+      "juego"
+      "resultado"
+      "ganadores"
+      "error";
   }
 
-  #juego{
-    grid-area: juego;
-    background-image: url('https://external-preview.redd.it/e5zoQw-hgw-LCjdhC_4G8IAcHxex5pzda_BD_FPTcBY.png?width=640&crop=smart&auto=webp&s=c49f7f29d2bb61f41f209ff2191cb7f69f3fa6e9');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  #puntuaciones {
+    width: 100vw;
   }
 
-  #respuesta{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-right: 250px;
-    gap: 20px;
+  #resultado {
+    width: 100vw;
+    margin-left: 0;
   }
 
-  #resultado{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-right: 250px;
-    gap: 20px;
+  #juego {
+    margin-bottom: 20px;
+  }
+
+  #juego h1, #juego p {
+    margin-right: 0;
+  }
+
+  .container {
+    align-items: flex-start;
   }
 
   .pokemon-img {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
-    margin-right: 330px;
+    margin-right: 0;
   }
 
-  #ganadoresBtn{
-    width: 200px;
-    height: 40px;
-    background-color: lightblue;
-    color: white;
+  #respuesta {
+    margin-right: 0;
+  }
+
+  #ganadoresBtn {
+    margin-top: 20px;
+  }
+
+  #puntuaciones {
+    margin-top: 20px;
+  }
+
+  #puntuaciones li {
+    margin-bottom: 10px;
+  }
+
+  #puntuaciones li p {
+    font-size: 14px;
+  }
+
+  #errorSesion {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
     font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 60px;
   }
 
-  #juego{
-    background-image: url('https://external-preview.redd.it/e5zoQw-hgw-LCjdhC_4G8IAcHxex5pzda_BD_FPTcBY.png?width=640&crop=smart&auto=webp&s=c49f7f29d2bb61f41f209ff2191cb7f69f3fa6e9');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  input[type="text"], input[type="password"] {
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
   }
-  
 
+  button[type="submit"] {
+    width: 60px;
+    height: 30px;
+    font-size: 14px;
+  }
 
+  #ganadoresBtn {
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+  }
 }

@@ -9,10 +9,8 @@ function Navigation() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        // esconde iniciar sesion
         const login = document.getElementById("loginNav");
         login.style.display = "none";
-        // crea cerrar sesion
         const cerrarSesion = document.createElement("a");
         cerrarSesion.className = "link";
         cerrarSesion.id = "cerrarSesion";
@@ -24,14 +22,18 @@ function Navigation() {
         });
         const navegation = document.querySelector(".navegation");
         navegation.appendChild(cerrarSesion);
+        const bienvenida = document.createElement("p");
+        bienvenida.id = "bienvenida";
+        bienvenida.innerText = `Bienvenid@ ${user.email}`;
+        navegation.appendChild(bienvenida);
       } else {
-        // muestra iniciar sesion
         const login = document.getElementById("loginNav");
         login.style.display = "block";
-        // elimina cerrar sesion
         const cerrarSesion = document.getElementById("cerrarSesion");
         if (cerrarSesion) {
           cerrarSesion.remove();
+          const bienvenida = document.getElementById("bienvenida");
+          bienvenida.remove();
         }
       }
     });
@@ -39,7 +41,6 @@ function Navigation() {
   
   function handlePokemonSelect(pokemonName) {
     console.log(`Selected pokemon: ${pokemonName}`);
-    // Aquí podrías hacer algo con el nombre del Pokémon seleccionado, como buscarlo en la PokeAPI
   }
 
   return (

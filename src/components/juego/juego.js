@@ -18,7 +18,6 @@ const Juego = () => {
       if (user) {
         const uid = user.uid;
       } else {
-        // se muestra un div puntuaciones de que debe iniciar sesión para guardar la puntuación en el div puntuaciones
         const p = document.createElement('p');
         p.textContent = 'Debes iniciar sesión para guardar tu puntuación';
         const errorSesion = document.getElementById('errorSesion');
@@ -83,7 +82,6 @@ const Juego = () => {
       setVidas(vidas - 1);
       setNombreIngresado('');
       if (vidas === 0) {
-        // oculta el div juego
         document.getElementById('juego').style.display = 'none';
         setResultado('Perdiste');
         escribePuntuacion();

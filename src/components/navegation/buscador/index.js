@@ -11,7 +11,7 @@ function PokemonSearch() {
     setSearchText(inputValue);
 
     if (inputValue.length >= 2) {
-        // hace un fetch a la pokeapi cargando todos los pokemon y buscar si el valor del input se parece a alguno
+        // fetch a la pokeapi cargando todos los pokemon y buscar si el valor del input se parece a alguno
         fetch('https://pokeapi.co/api/v2/pokemon?limit=1118')
         .then(response => response.json())
         .then((datosAPI) => {
